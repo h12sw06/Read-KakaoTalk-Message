@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChatGPTCopilotChannelManager">
+    <dynamicCommends>
+      <option value="explain" />
+      <option value="translate to chinese" />
+      <option value="translate to english" />
+      <option value="check bugs" />
+      <option value="optimize code" />
+    </dynamicCommends>
+    <chatChannels>
+      <chatChannel>
+        <option name="model" value="gpt-3.5-turbo" />
+        <option name="messages" />
+      </chatChannel>
+      <chatChannel>
+        <option name="name" value="Assistant" />
+        <option name="roleModel">
+          <RoleModel>
+            <name>Assistant</name>
+            <messages>
+              <Message>
+                <option name="content" value="A comprehensive and accurate assistant" />
+                <option name="id" value="659f6eb6-18f5-4174-809f-051e99e501f1" />
+                <option name="name" value="Assistant" />
+                <option name="role" value="system" />
+              </Message>
+            </messages>
+          </RoleModel>
+        </option>
+        <option name="messages">
+          <Message>
+            <option name="content" value="A comprehensive and accurate assistant" />
+            <option name="id" value="659f6eb6-18f5-4174-809f-051e99e501f1" />
+            <option name="name" value="Assistant" />
+            <option name="role" value="system" />
+          </Message>
+        </option>
+      </chatChannel>
+    </chatChannels>
+  </component>
+</project>
