@@ -27,7 +27,11 @@ public class MyAccessibilityService extends AccessibilityService {
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     @Override
     public void onAccessibilityEvent(@NonNull AccessibilityEvent event) {
-        if (event.getEventType() != AccessibilityEvent.TYPE_NOTIFICATION_STATE_CHANGED) return;
+        if (
+            type != AccessibilityEvent.TYPE_NOTIFICATION_STATE_CHANGED &&
+            type != AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED &&
+            type != AccessibilityEvent.TYPE_VIEW_SCROLLED
+            ) return
 
         // 패키지 체크
         final String packageName = event.getPackageName().toString();
