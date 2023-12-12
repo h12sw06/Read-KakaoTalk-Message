@@ -27,6 +27,8 @@ public class MyAccessibilityService extends AccessibilityService {
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     @Override
     public void onAccessibilityEvent(@NonNull AccessibilityEvent event) {
+        int type = event.getEventType();
+
         if (
             type != AccessibilityEvent.TYPE_NOTIFICATION_STATE_CHANGED &&
             type != AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED &&
@@ -46,7 +48,7 @@ public class MyAccessibilityService extends AccessibilityService {
 
         // 정보 가져오기
         if (event.getClassName() == null || event.getSource() == null) return;
-        int type = event.getEventType();
+        //int type = event.getEventType();
         String className = event.getClassName().toString();
         AccessibilityNodeInfo rootNode = event.getSource();
 
